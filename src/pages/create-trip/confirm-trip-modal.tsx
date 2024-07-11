@@ -24,10 +24,10 @@ function CornfirmTripModal({
           </div>
           <p className="text-sm text-zinc-400">
             Para concluir a criação da viagem para{" "}
-            <span className="font-semibold tezt-zinc-100">slz</span> nas datas
+            <span className="font-semibold tezt-zinc-100">São Luís, Brasil</span> nas datas
             de{" "}
             <span className="font-semibold tezt-zinc-100">
-              16 a 20 de agosto de 2024
+              16 a 22 de agosto de 2024
             </span>
             preencha seus dados abaixo:
           </p>
