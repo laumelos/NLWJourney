@@ -1,5 +1,6 @@
 import { X, User, Mail } from "lucide-react";
 import { FormEvent } from "react";
+import Button from "../../components/button";
 
 interface ConfirmTripModalProps {
   closeConfirmModalTrip: () => void;
@@ -24,8 +25,10 @@ function CornfirmTripModal({
           </div>
           <p className="text-sm text-zinc-400">
             Para concluir a criação da viagem para{" "}
-            <span className="font-semibold tezt-zinc-100">São Luís, Brasil</span> nas datas
-            de{" "}
+            <span className="font-semibold tezt-zinc-100">
+              São Luís, Brasil
+            </span>{" "}
+            nas datas de{" "}
             <span className="font-semibold tezt-zinc-100">
               16 a 22 de agosto de 2024
             </span>
@@ -53,9 +56,10 @@ function CornfirmTripModal({
               autoComplete="off"
             />
           </div>
-          <button className="h-11 bg-lime-300 text-lime-950 rounded-lg px-5 py-2 font-medium flex gap-2 hover:bg-lime-400 w-full justify-center items-center">
+
+          <Button type="submit" variant="primary" size="full">
             Confirmar criação da viagem
-          </button>
+          </Button>
         </form>
       </div>
     </div>
