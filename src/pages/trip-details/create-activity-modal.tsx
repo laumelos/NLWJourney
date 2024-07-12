@@ -41,7 +41,7 @@ function CreateActivityModal({
                 className="!bg-transparent text-lg placeholder-zinc-400 outline-none flex-1"
                 type="text"
                 name="title"
-                placeholder="Qual a atividade?"
+                placeholder="Data da atividade?"
               />
             </div>
             <div className="h-14 w-36 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">

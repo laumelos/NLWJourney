@@ -9,17 +9,20 @@ interface DestinationAndDateStepProps {
   isGuestsInputOpen: boolean;
   closeGuestsInput: () => void;
   openGuestsInput: () => void;
+  setDestination: (destination: string) => void;
+  eventStartAndDates: DateRange | undefined;
+  setEventStartAndDates: (date: DateRange | undefined) => void;
 }
 
 function DestinationAndDateStep({
   isGuestsInputOpen,
   closeGuestsInput,
   openGuestsInput,
+  setDestination,
+  eventStartAndDates,
+  setEventStartAndDates,
 }: DestinationAndDateStepProps) {
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
-  const [eventStartAndDates, setEventStartAndDates] = useState<
-    DateRange | undefined
-  >();
 
   function OpenDatePicker() {
     return setIsDatePickerOpen(true);
@@ -37,13 +40,14 @@ function DestinationAndDateStep({
       : null;
   return (
     <div className="h-16 bg-zinc-900 px-4 rounded-xl flex items-center shadow-shape gap-3">
-      <div className="flex items-center gap-2 w-56">
+      <div className="flex items-center gap-2 w-52">
         <MapPin className="size-5 text-zinc-400" />
         <input
           disabled={isGuestsInputOpen}
           className="bg-transparent text-lg placeholder-zinc-400 outline-none"
           type="text"
           placeholder="Para onde você vai?"
+          onChange={(event) => setDestination(event.target.value)}
         />
       </div>
 
