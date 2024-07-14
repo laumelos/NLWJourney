@@ -6,7 +6,7 @@ interface InviteGuestModalProps {
   closeGuestsModal: () => void;
   emailsToInvite: string[];
   addNewEmailToInvite: (event: FormEvent<HTMLFormElement>) => void;
-  removeEmailFromInvites: (email: String) => void;
+  removeEmailFromInvites: (email: string) => void;
 }
 function InviteGuestModal({
   closeGuestsModal,

@@ -4,13 +4,13 @@ import Button from "../../../components/button";
 interface InviteGuestsStepProps {
   openGuestsModal: () => void;
   emailsToInvite: string[];
-  openConfirmModalTrip: () => void;
+  openConfirmTripModal: () => void;
 }
 
 function InviteGuestsStep({
   openGuestsModal,
   emailsToInvite,
-  openConfirmModalTrip,
+  openConfirmTripModal,
 }: InviteGuestsStepProps) {
   return (
     <div className="h-16 bg-zinc-900 px-4 rounded-xl flex items-center shadow-shape gap-3">
@@ -33,7 +33,7 @@ function InviteGuestsStep({
 
       <div className="w-px h-6 bg-zinc-800"></div>
 
-      <Button onClick={openConfirmModalTrip} variant="primary" size="default">
+      <Button onClick={openConfirmTripModal} variant="primary" size="default">
         Confirmar viagem
         <ArrowRight className="size-5" />
       </Button>

@@ -3,14 +3,14 @@ import { FormEvent } from "react";
 import Button from "../../components/button";
 
 interface ConfirmTripModalProps {
-  closeConfirmModalTrip: () => void;
+  closeConfirmTripModal: () => void;
   createTrip: (event: FormEvent<HTMLFormElement>) => void;
   setOwnerName: (name: string) => void;
   setOwnerEmail: (email: string) => void;
 }
 
 function CornfirmTripModal({
-  closeConfirmModalTrip,
+  closeConfirmTripModal,
   createTrip,
   setOwnerName,
   setOwnerEmail,
@@ -23,7 +23,7 @@ function CornfirmTripModal({
             <h2 className="text-lg font-semibold">
               Confirmar criação de viagem
             </h2>
-            <button type="button" onClick={closeConfirmModalTrip}>
+            <button type="button" onClick={closeConfirmTripModal}>
               <X className="size-5 text-zinc-400" />
             </button>
           </div>
@@ -48,6 +48,7 @@ function CornfirmTripModal({
               type="text"
               name="name"
               placeholder="Seu nome completo"
+              autoComplete="off"
               onChange={(event) => setOwnerName(event.target.value)}
             />
           </div>
